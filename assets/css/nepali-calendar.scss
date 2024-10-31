@@ -1,0 +1,115 @@
+.PatroCenter {
+  text-align: center;
+}
+
+#NepaliCalendarElement {
+  width: 100%;
+}
+
+#NepaliCalendar {
+  th, td {
+    text-align: center;
+    vertical-align: middle;
+  }
+  .Next, .Prev {
+    cursor: pointer;
+  }
+  .Next:hover, .Prev:hover {
+    color: #fff;
+  }
+  td {
+    &.today {
+      background: #004DFF;
+      color: #fff;
+    }
+    position: relative;
+  }
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.week_holiday {
+  background: rgb(202, 78, 78);
+  color: #fff;
+  font-weight: bold;
+}
+
+#NepaliCalendar .popoverDate {
+  position: absolute;
+  height: 20px;
+  width: 100px;
+  top: 70%;
+  z-index: 10000;
+  border-radius: 5px;
+  background: #801300;
+  box-shadow: 2px 2px 2px black;
+  left: 0;
+  span {
+    font-size: 12px;
+    color: #fff;
+    line-height: 19px;
+    display: block;
+  }
+}
+
+.NepaliCalendarElement table {
+  width: 100%;
+  border: none;
+  td, th {
+    border-left: 1px solid #e1e1e1;
+    border-right: 0 !important;
+    border-top: 0 !important;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 0.4em;
+    font-weight: normal;
+  }
+}
+
+/* version 2 */
+
+table#NepaliCalendar {
+  thead tr:first-child th:first-child:hover {
+    cursor: pointer;
+  }
+  th{
+    &.Prev,
+    &.Next{
+      background-image: url("../images/pre-next.jpg");
+      width: 40px;
+      height: 40px;
+      background-size:80px auto;
+      &:hover{
+        opacity:0.7;
+      }
+    }
+    &.Next {
+      background-position:40px 0;
+    }
+    &.Prev {
+      background-position:2px 0;
+    }
+  }
+}
+
+#NepaliCalendar tbody td, .PatroCenter.CurrentDateAndMonth {
+  cursor: pointer;
+}
+
+#NepaliCalendar {
+  .yearSelectionDropDown, .monthSelectionDropDown {
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    margin-right: 5px;
+    height: 26px;
+    padding: 0 0px;
+    text-align: center;
+  }
+}
